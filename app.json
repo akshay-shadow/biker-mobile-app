@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "BikeRiders",
+    "slug": "bikeriders-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bikeriders.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "BikeRiders needs access to your location to track rides and show nearby riders.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "BikeRiders needs access to your location to track rides and show nearby riders."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.bikeriders.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow BikeRiders to use your location for ride tracking."
+        }
+      ]
+    ]
+  }
+}

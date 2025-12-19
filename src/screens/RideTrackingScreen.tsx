@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import MapView, { Marker, Polyline } from 'react-native-maps';
 import * as Location from 'expo-location';
 
@@ -114,7 +115,7 @@ export default function RideTrackingScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {location && (
         <MapView
           style={styles.map}
@@ -165,20 +166,21 @@ export default function RideTrackingScreen() {
           {tracking ? 'Stop Tracking' : 'Start Tracking'}
         </Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#121318',
   },
   map: {
     flex: 1,
   },
   statsContainer: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    backgroundColor: '#1C1C1C',
     padding: 16,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
@@ -194,26 +196,27 @@ const styles = StyleSheet.create({
   },
   statLabel: {
     fontSize: 12,
-    color: '#9ca3af',
+    color: '#ECEAD1',
+    opacity: 0.7,
     marginBottom: 4,
   },
   statValue: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#1f2937',
+    color: '#ECEAD1',
   },
   button: {
-    backgroundColor: '#2563eb',
+    backgroundColor: '#B97232',
     margin: 16,
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
   },
   buttonStop: {
-    backgroundColor: '#dc2626',
+    backgroundColor: '#AB3801',
   },
   buttonText: {
-    color: '#fff',
+    color: '#ECEAD1',
     fontSize: 18,
     fontWeight: '600',
   },
